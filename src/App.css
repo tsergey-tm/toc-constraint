@@ -1,0 +1,58 @@
+Table.ResultTable {
+    border-color: var(--border-color);
+    border-style: solid;
+    border-width: 1px;
+    border-collapse: collapse;
+    margin: 1em;
+}
+
+Table.ResultTable thead tr:first-child th {
+    padding: 0.5em;
+    border-color: var(--border-color);
+    border-style: solid;
+    border-width: 1px;
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 0;
+    height: 2em;
+    z-index: 1;
+}
+
+Table.ResultTable thead tr th {
+    padding: 0.5em;
+    border-color: var(--border-color);
+    border-style: solid;
+    border-width: 1px;
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 3em;
+    height: 2em;
+    z-index: 1;
+}
+
+Table.ResultTable tbody tr th {
+    padding: 0.5em;
+    border-color: var(--border-color);
+    border-style: solid;
+    border-width: 1px;
+}
+
+Table.ResultTable tbody tr td {
+    padding: 0.5em;
+    border-color: var(--border-color);
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+}
+
+.DiffBad {
+    background-color: var(--diff-bad);
+}
+
+.DiffGood {
+    background-color: var(--diff-good);
+}
+
+.DiffEqual {
+    background-color: var(--diff-equal);
+}
