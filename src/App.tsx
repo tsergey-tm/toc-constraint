@@ -151,10 +151,10 @@ const App = () => {
                     <ul>
                         <li>Временное изменение - на несколько дней вводятся изменения
                             <ul>
-                                <li>улучшение - в полтора раза больше деталей обрабатывается параллельно</li>
+                                <li>улучшение - в два раза больше деталей обрабатывается параллельно</li>
                                 <li>ускорение - в два раза быстрее обрабатывается каждая деталь</li>
                                 <li>ухудшение - в два раза меньше деталей обрабатывается параллельно</li>
-                                <li>улучшение - в полтора раза дольше обрабатывается каждая деталь</li>
+                                <li>улучшение - в два раза дольше обрабатывается каждая деталь</li>
                             </ul>
                         </li>
                         <li>Постоянное изменение
@@ -184,22 +184,25 @@ const App = () => {
                     <th rowSpan={2}>Изб. 4</th>
                     <th colSpan={2}>Пропускная способность</th>
                     <th rowSpan={2}>Среднее время производства</th>
-                    <th colSpan={11}>Гистограмма времени производства</th>
+                    <th colSpan={14}>Гистограмма времени производства</th>
                 </tr>
                 <tr>
                     <th>&nbsp;</th>
                     <th>Сред.</th>
-                    <th>10</th>
-                    <th>11</th>
-                    <th>12</th>
-                    <th>13</th>
-                    <th>14</th>
-                    <th>15</th>
-                    <th>16</th>
-                    <th>17</th>
-                    <th>18</th>
-                    <th>19</th>
-                    <th>20</th>
+                    <th>23</th>
+                    <th>24</th>
+                    <th>25</th>
+                    <th>26</th>
+                    <th>27</th>
+                    <th>28</th>
+                    <th>29</th>
+                    <th>30</th>
+                    <th>31</th>
+                    <th>32</th>
+                    <th>33</th>
+                    <th>34</th>
+                    <th>35</th>
+                    <th>36</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -216,17 +219,20 @@ const App = () => {
 
                         {tableResult.table.length > index && getLeadTimeAvgInfo(index)}
 
-                        {tableResult.table.length > index && getLeadTimeInfo(index, 10)}
-                        {tableResult.table.length > index && getLeadTimeInfo(index, 11)}
-                        {tableResult.table.length > index && getLeadTimeInfo(index, 12)}
-                        {tableResult.table.length > index && getLeadTimeInfo(index, 13)}
-                        {tableResult.table.length > index && getLeadTimeInfo(index, 14)}
-                        {tableResult.table.length > index && getLeadTimeInfo(index, 15)}
-                        {tableResult.table.length > index && getLeadTimeInfo(index, 16)}
-                        {tableResult.table.length > index && getLeadTimeInfo(index, 17)}
-                        {tableResult.table.length > index && getLeadTimeInfo(index, 18)}
-                        {tableResult.table.length > index && getLeadTimeInfo(index, 19)}
-                        {tableResult.table.length > index && getLeadTimeInfo(index, 20)}
+                        {tableResult.table.length > index && getLeadTimeInfo(index, 23)}
+                        {tableResult.table.length > index && getLeadTimeInfo(index, 24)}
+                        {tableResult.table.length > index && getLeadTimeInfo(index, 25)}
+                        {tableResult.table.length > index && getLeadTimeInfo(index, 26)}
+                        {tableResult.table.length > index && getLeadTimeInfo(index, 27)}
+                        {tableResult.table.length > index && getLeadTimeInfo(index, 28)}
+                        {tableResult.table.length > index && getLeadTimeInfo(index, 29)}
+                        {tableResult.table.length > index && getLeadTimeInfo(index, 30)}
+                        {tableResult.table.length > index && getLeadTimeInfo(index, 31)}
+                        {tableResult.table.length > index && getLeadTimeInfo(index, 32)}
+                        {tableResult.table.length > index && getLeadTimeInfo(index, 33)}
+                        {tableResult.table.length > index && getLeadTimeInfo(index, 34)}
+                        {tableResult.table.length > index && getLeadTimeInfo(index, 35)}
+                        {tableResult.table.length > index && getLeadTimeInfo(index, 36)}
                     </tr>
                 )}
                 </tbody>

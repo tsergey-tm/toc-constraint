@@ -7,10 +7,10 @@ export const FactoryConfigMaker = () => {
         "Барабан-буфер-канат",
         true,
         [4, 4, 12, 4, 4],
-        [new Actor(6, 2), new Actor(6, 2), new Actor(4, 2), new Actor(6, 2), new Actor(6, 2)],
-        [new Actor(6, 2), new Actor(6, 2), new Actor(4, 2), new Actor(6, 2), new Actor(6, 2)],
-        10,
+        [new Actor(6, 4), new Actor(6, 4), new Actor(4, 4), new Actor(6, 4), new Actor(6, 4)],
+        [new Actor(6, 4), new Actor(6, 4), new Actor(4, 4), new Actor(6, 4), new Actor(6, 4)],
         30,
+        60,
         -1,
         -1,
         0,
@@ -19,7 +19,7 @@ export const FactoryConfigMaker = () => {
 
     const makeTemporaryAddConfig = (bbk: FactoryConfig, name: string, pos: number) => {
         const action = [...bbk.actor];
-        action[pos] = new Actor(Math.ceil(action[pos].size * 1.5), action[pos].time);
+        action[pos] = new Actor(Math.ceil(action[pos].size * 2), action[pos].time);
         return new FactoryConfig(name, true, bbk.buffer, bbk.actor, action, bbk.warmTime, bbk.statTime, pos, 2, 4, bbk.constraintPos);
     };
 
@@ -31,13 +31,13 @@ export const FactoryConfigMaker = () => {
 
     const makeTemporaryFastConfig = (bbk: FactoryConfig, name: string, pos: number) => {
         const action = [...bbk.actor];
-        action[pos] = new Actor(action[pos].size, 1);
+        action[pos] = new Actor(action[pos].size, action[pos].time * 0.5);
         return new FactoryConfig(name, true, bbk.buffer, bbk.actor, action, bbk.warmTime, bbk.statTime, pos, 2, 4, bbk.constraintPos);
     };
 
     const makeTemporarySlowConfig = (bbk: FactoryConfig, name: string, pos: number) => {
         const action = [...bbk.actor];
-        action[pos] = new Actor(action[pos].size, 3);
+        action[pos] = new Actor(action[pos].size, action[pos].time * 2);
         return new FactoryConfig(name, false, bbk.buffer, bbk.actor, action, bbk.warmTime, bbk.statTime, pos, 2, 4, bbk.constraintPos);
     };
 
@@ -55,13 +55,13 @@ export const FactoryConfigMaker = () => {
 
     const makePermanentFastConfig = (bbk: FactoryConfig, name: string, pos: number) => {
         const action = [...bbk.actor];
-        action[pos] = new Actor(action[pos].size, 1);
+        action[pos] = new Actor(action[pos].size, action[pos].time - 1);
         return new FactoryConfig(name, true, bbk.buffer, action, action, bbk.warmTime, bbk.statTime, pos, -1, 0, bbk.constraintPos);
     };
 
     const makePermanentSlowConfig = (bbk: FactoryConfig, name: string, pos: number) => {
         const action = [...bbk.actor];
-        action[pos] = new Actor(action[pos].size, 3);
+        action[pos] = new Actor(action[pos].size, action[pos].time + 1);
         return new FactoryConfig(name, false, bbk.buffer, action, action, bbk.warmTime, bbk.statTime, pos, -1, 0, bbk.constraintPos);
     };
 
